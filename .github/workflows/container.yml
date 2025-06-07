@@ -1,4 +1,4 @@
-name: deploy/container
+name: deploy-container
 
 on:
   push:
@@ -29,8 +29,8 @@ jobs:
       - name: Uploading to AWS Bucket
         uses: shinyinc/action-aws-cli@v1.2
         with:
-          args: s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
+          args: s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_NAME }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ap-south-1
+          # AWS_DEFAULT_REGION: "ap-south-1" # Replace with your AWS region
