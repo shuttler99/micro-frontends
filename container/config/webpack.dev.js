@@ -7,7 +7,6 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const packageJson = require("../../../packages/marketing/package.json");
 
 const devConfig = {
-  //to define on which mode we need to run the application
   mode: "development",
   //the development servewr
   devServer: {
@@ -15,10 +14,6 @@ const devConfig = {
     historyApiFallback: { index: "index.html" },
   },
   plugins: [
-    //where our main html file will be defined
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
