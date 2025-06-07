@@ -1,5 +1,5 @@
 const { ModuleFederationPlugin } = require("webpack").container;
-const packageJson = require("../../../packages/container/package.json");
+const packageJson = require("../package.json");
 const { merge } = require("webpack-merge");
 
 const marketingUrl = process.env.PRODUCTION_DOMAIN;

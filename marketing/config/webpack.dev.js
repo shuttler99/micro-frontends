@@ -1,6 +1,6 @@
 const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const packageJson = require("../../../packages/marketing/package.json");
+const packageJson = require("../package.json");
 
 const commonConfig = require("./webpack.common");
 
