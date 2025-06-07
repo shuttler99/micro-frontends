@@ -1,0 +1,1 @@
+checking if pipeline triggers when changes are only in container 
