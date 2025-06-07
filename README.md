@@ -13,7 +13,7 @@ This is a Micro Frontend architecture project demonstrating modular frontend dev
 
 ### Prerequisites
 - Node.js (v14 or later)
-- npm or Yarn
+- npm or Yar
 
 ### Installation
 1. Clone the repository
