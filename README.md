@@ -6,10 +6,10 @@ This is a Micro Frontend architecture project demonstrating modular frontend dev
 ## Project Structure
 - `container/`: Main container application
 - `marketing/`: Marketing micro-frontend
-- `auth/`: Authentication micro-frontend
-- `dashboard/`: Dashboard micro-frontend
+- `auth/`: Authentication micro-mfrontend
+- `dashboard/`: Dashboard micro- frontend
 
-## Setup Instructions
+
 
 ### Prerequisites
 - Node.js (v14 or later)
