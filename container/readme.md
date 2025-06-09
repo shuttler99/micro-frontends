@@ -5,3 +5,4 @@ so a pipeline only triggers when changes  paths:
       - Invalidate the html file available on cloud front and setting the secret variable
 
       --Echoing the distribution id of cloud front
+      --Now i have name it to cloud front distribution id
