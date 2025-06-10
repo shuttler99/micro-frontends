@@ -2,7 +2,7 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const packageJson = require("../package.json");
 const { merge } = require("webpack-merge");
 
-const domain = process.env.PRODUCTION_DOMAIN;
+const domain = "https://d2mma1qrf02kvz.cloudfront.net";
 
 const webpackCommon = require("./webpack.common");
 const webpack = require("webpack");
