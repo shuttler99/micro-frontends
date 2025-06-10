@@ -5,6 +5,7 @@ const { merge } = require("webpack-merge");
 const domain = process.env.PRODUCTION_DOMAIN;
 
 const webpackCommon = require("./webpack.common");
+const webpack = require("webpack");
 
 const prodConfig = {
   mode: "production",
@@ -20,6 +21,12 @@ const prodConfig = {
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
+    }),
+
+    new webpack.DefinePlugin({
+      "process.env.PRODUCTION_DOMAIN": JSON.stringify(
+        process.env.PRODUCTION_DOMAIN
+      ),
     }),
   ],
 };
