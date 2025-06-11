@@ -8,7 +8,6 @@ const packageJson = require("../../../packages/marketing/package.json");
 
 const devConfig = {
   mode: "development",
-  //the development servewr
   devServer: {
     port: 8080,
     historyApiFallback: { index: "index.html" },
