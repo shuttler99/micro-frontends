@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { mount } from "marketing/MarketingApp";
+import { mount } from "auth/AuthApp";
 import { useHistory } from "react-router-dom";
 
-const MarketingApp = () => {
+const AuthApp = ({ setisLoggedIn, isLoggedIn }) => {
   const divRef = useRef();
   const history = useHistory();
 
@@ -12,10 +12,15 @@ const MarketingApp = () => {
     }
   };
 
+  const signedIn = () => {
+    setisLoggedIn(true);
+  };
+
   useEffect(() => {
     const { onParentNavigate } = mount(divRef.current, {
       onNavigate: onNavigate,
       initialPath: history.location.pathname,
+      onSignedIn: signedIn,
     });
 
     const unlisten = history.listen(onParentNavigate);
@@ -28,4 +33,4 @@ const MarketingApp = () => {
   return <div ref={divRef} />;
 };
 
-export default MarketingApp;
+export default AuthApp;
