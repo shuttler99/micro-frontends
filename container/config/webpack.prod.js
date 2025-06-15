@@ -11,7 +11,6 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    //this is the path which will be access by the user
     publicPath: "/container/latest/",
   },
   plugins: [
@@ -19,6 +18,7 @@ const prodConfig = {
       name: "container",
       remotes: {
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
+        auth: `auth@${domain}/auth/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),
